@@ -224,7 +224,7 @@ int create_socket(int port,char *addr)
    // połączenie klienta do soketu
    if (connect(sockfd, (struct sockaddr *) &servaddr, sizeof(servaddr))<0) {
       fprintf(stderr, "Problem in creating data channel\n");
-      exit(3);
+      exit(4);
    }
 
    return(sockfd);

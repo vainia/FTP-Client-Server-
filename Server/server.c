@@ -47,7 +47,7 @@ int main (int argc, char **argv)
    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
    if(atoi(argv[1])<=1024) {
       fprintf(stderr, "Port number must be greater than 1024\n");
-      exit(2);
+      exit(5);
    }
    servaddr.sin_port = htons(atoi(argv[1]));
 
@@ -250,7 +250,7 @@ int create_socket(int port)
 
    if ((bind (listenfd, (struct sockaddr *) &dataservaddr, sizeof(dataservaddr))) <0) {
       fprintf(stderr, "Problem in binding the data socket\n");
-      exit(2);
+      exit(6);
    }
 
    // Nasłuciwanie soketu za pomocy tworzenia kolejki połączen, zaczym czekanie na klientów
@@ -269,7 +269,7 @@ int accept_conn(int sock)
    // Przyjmowanie polączenia
    if ((dataconnfd = accept (sock, (struct sockaddr *) &datacliaddr, &dataclilen)) <0) {
       fprintf(stderr, "Problem in accepting the data socket\n");
-      exit(2);
+      exit(7);
    }
 
    return(dataconnfd);

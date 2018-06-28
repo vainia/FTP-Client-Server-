@@ -1,5 +1,3 @@
-<!-- Projekt 2 Wzajemne udostępnianie plików (max 50 punktów)
-Aplikacja służąca do wzajemnego udostępniania plików. W projekcie należy opracować zasady takiego udostępniania. Na przykład rozdzielenie zadań między serwer i klienta. Zadania serwera: przyjmowanie nowych klientów oraz logowanie ich w sieci, prowadzenie bazy danych o udostępnianych plikach, odłączanie klientów od sieci. Zadania klienta: dołączanie/odłączanie się od sieci, tworzenie listy udostępnianych plików i przekazywanie jej serwerowi, wyszukiwanie pliku na serwerze i składanie zamówienia na wybrany plik, realizacja złożonych zamówień – przesyłanie pliku. -->
 
 # OGÓLNY OPIS
 
@@ -15,7 +13,9 @@ File Transfer Protocol (FTP) klient-serwer apklikacja ([RFC 959](https://www.rfc
 
 	~$ make
 ```
-*  Ze strony serwera:
+
+* Ze strony serwera:
+
 ```
 	~$ cd ./Server/
 	~$ ./server <port number>
@@ -23,6 +23,7 @@ File Transfer Protocol (FTP) klient-serwer apklikacja ([RFC 959](https://www.rfc
 Serwer zostanie podniesiony z ustawieniem nasłuchiwania połączen na wybranym porcie.
 
 * Ze strony klienta:
+
 ```
 	~$ cd ./Client/
 	~$ ./client <IP address of server> <port number>
